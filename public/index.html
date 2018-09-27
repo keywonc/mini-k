@@ -1,6 +1,40 @@
 <html>
   <head>
     <title>Mini-K</title>
+
+    <link rel="stylesheet" type="text/css" href="include/style.css">
+
+    <!-- lazy loading -->
+    <script type="text/javascript" src="include/jquery.js"></script>
+    <script type="text/javascript" src="include/jquery.lazy.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          alert('Document Ready!');
+          $('.lazy').Lazy();
+      });
+    </script>
   </head>
-  <body>Hello World!</body>
+
+  <body>
+    <h1>Lazy Load! - 1</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/c-school.jpg" />
+    <div class="spacer"></div>
+
+    <h1>Lazy Load! - 2</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/colorful-city.jpg" />
+    <div class="spacer"></div>
+
+    <h1>Lazy Load! - 3</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/danjong.jpg" />
+    <div class="spacer"></div>
+
+    <h1>Lazy Load! - 4</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/play-stone.jpg" />
+    <div class="spacer"></div>
+
+    <h1>Lazy Load! - 5</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/distrust.jpg" />
+    <div class="spacer"></div>
+
+  </body>
 </html>
