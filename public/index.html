@@ -9,31 +9,73 @@
     <script type="text/javascript" src="include/jquery.lazy.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-          alert('Document Ready!');
-          $('.lazy').Lazy();
+        // alert('Document Ready!');
+        $(".lazy").Lazy({
+
+          // configuration
+          scrollDirection: 'vertical',
+          effect: 'fadeIn',
+          visibleOnly: true,
+
+          // diagnostics
+          // onError: function(element) {
+          //   console.log('error loading ' + element.data('src'));
+          // }
+          //
+          // beforeLoad: function(element) {
+          //   // called before an elements gets handled
+          //   console.log("Before lazy is handled");
+          // },
+          // afterLoad: function(element) {
+          //   // called after an element was successfully handled
+          //   console.log("Lazy success");
+          // },
+          // onError: function(element) {
+          //   // called whenever an element could not be handled
+          //   console.log("Lazy fail");
+          // },
+          // onFinishedAll: function() {
+          //   // called once all elements was handled
+          //   console.log("Lazy finished");
+          // }
+
+        });
+
       });
     </script>
   </head>
 
   <body>
-    <h1>Lazy Load! - 1</h1>
-    <img class="lazy" data-src="img/play-stone.jpg" />
+    <h1>1 - Play Stone</h1>
+    <img src="img/play-stone.jpg" />
     <div class="spacer"></div>
 
-    <h1>Lazy Load! - 2</h1>
-    <img class="lazy" data-src="img/c-school.jpg" />
+    <h1>2 - C-School</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/c-school.jpg" />
     <div class="spacer"></div>
 
-    <h1>Lazy Load! - 3</h1>
-    <img class="lazy" data-src="img/colorful-city.jpg" />
+    <h1>3 - Colorful City</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/colorful-city.jpg" />
     <div class="spacer"></div>
 
-    <h1>Lazy Load! - 4</h1>
-    <img class="lazy" data-src="img/danjong.jpg" />
+    <h1>4 - Danjong</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/danjong.jpg" />
     <div class="spacer"></div>
 
-    <h1>Lazy Load! - 5</h1>
-    <img class="lazy" data-src="img/distrust.jpg" />
+    <h1>5 - Distrust</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/distrust.jpg" />
+    <div class="spacer"></div>
+
+    <h1>6 - Edu Game</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/edu-game.jpg" />
+    <div class="spacer"></div>
+
+    <h1>7 - Game Design</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/game-design.jpg" />
+    <div class="spacer"></div>
+
+    <h1>8 - H Ondream</h1>
+    <img class="lazy" data-src="https://thejakdang.com/index-asset/h-ondream.jpg" />
     <div class="spacer"></div>
 
   </body>

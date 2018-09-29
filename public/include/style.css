@@ -1,8 +1,10 @@
 .spacer {
   width: 100%;
-  height: 1000px;
+  height: 400px;
   background-color: yellow;
 }
 img {
   display: block;
+  width: 600px;
+  height: auto;
 }
