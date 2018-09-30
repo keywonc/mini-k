@@ -1,3 +1,6 @@
+
+<!-- DOCTYPE is required for lazy load -->
+<!DOCTYPE html>
 <html>
   <head>
     <title>Mini-K</title>
@@ -5,23 +8,27 @@
     <link rel="stylesheet" type="text/css" href="include/style.css">
 
     <!-- lazy loading -->
-    <script type="text/javascript" src="include/jquery.js"></script>
+    <script type="text/javascript" src="include/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="include/jquery.lazy.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+
         // alert('Document Ready!');
+
         $(".lazy").Lazy({
 
-          // configuration
-          scrollDirection: 'vertical',
-          effect: 'fadeIn',
-          visibleOnly: true,
+          // Configuration
+          // Default scroll direction is 'both'
+          // To use fadeIn, threshold must be 0
 
-          // diagnostics
-          // onError: function(element) {
-          //   console.log('error loading ' + element.data('src'));
-          // }
-          //
+          scrollDirection: 'vertical',
+          visibleOnly: true,
+          effect: "fadeIn",
+          effectTime: 2000,
+          threshold: 0
+
+          // Diagnostics
+
           // beforeLoad: function(element) {
           //   // called before an elements gets handled
           //   console.log("Before lazy is handled");
@@ -32,7 +39,7 @@
           // },
           // onError: function(element) {
           //   // called whenever an element could not be handled
-          //   console.log("Lazy fail");
+          //   console.log('error loading ' + element.data('src'));
           // },
           // onFinishedAll: function() {
           //   // called once all elements was handled
@@ -46,37 +53,59 @@
   </head>
 
   <body>
-    <h1>1 - Play Stone</h1>
-    <img src="img/play-stone.jpg" />
-    <div class="spacer"></div>
 
-    <h1>2 - C-School</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/c-school.jpg" />
-    <div class="spacer"></div>
+    <!-- First image does not use lazy load -->
+    <h1>Shown by Default</h1>
+    <img src="img/Unsplash-1075159-Woman.jpg" />
 
-    <h1>3 - Colorful City</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/colorful-city.jpg" />
-    <div class="spacer"></div>
+    <!-- Background image lazy load -->
+    <h1>Background Image</h1>
+    <div class="lazy" data-src="img/background-300k.jpg"></div>
 
-    <h1>4 - Danjong</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/danjong.jpg" />
-    <div class="spacer"></div>
+    <!-- Inline image lazy load -->
+    <!-- DO NOT include src attribute to img tags -->
+    <h1>Inline Images</h1>
+    <h2>Swim</h2>
+    <img class="lazy" data-src="img/Unsplash-1069955-Swim.jpg" />
 
-    <h1>5 - Distrust</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/distrust.jpg" />
-    <div class="spacer"></div>
+    <h2>Surf</h2>
+    <img class="lazy" data-src="img/Unsplash-1070778-Surf.jpg" />
 
-    <h1>6 - Edu Game</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/edu-game.jpg" />
-    <div class="spacer"></div>
+    <h2>Allianz</h2>
+    <img class="lazy" data-src="img/Unsplash-1071163-Allianz.jpg" />
 
-    <h1>7 - Game Design</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/game-design.jpg" />
-    <div class="spacer"></div>
+    <h2>Puppy</h2>
+    <img class="lazy" data-src="img/Unsplash-1072059-Puppy.jpg" />
 
-    <h1>8 - H Ondream</h1>
-    <img class="lazy" data-src="https://thejakdang.com/index-asset/h-ondream.jpg" />
-    <div class="spacer"></div>
+    <h2>Police</h2>
+    <img class="lazy" data-src="img/Unsplash-1073702-Police.jpg" />
+
+    <h2>Justice</h2>
+    <img class="lazy" data-src="img/Unsplash-1073707-Justice.jpg" />
+
+    <h2>Team</h2>
+    <img class="lazy" data-src="img/Unsplash-1073714-Team.jpg" />
+
+    <h2>Run</h2>
+    <img class="lazy" data-src="img/Unsplash-1075848-Run.jpg" />
+
+    <h2>Building</h2>
+    <img class="lazy" data-src="img/Unsplash-1075854-Building.jpg" />
+
+    <h2>CableCar</h2>
+    <img class="lazy" data-src="img/Unsplash-1077892-CableCar.jpg" />
+
+    <h2>X-Ray</h2>
+    <img class="lazy" data-src="img/Unsplash-1077983-Xray.jpg" />
+
+    <h2>Man</h2>
+    <img class="lazy" data-src="img/Unsplash-1078129-Man.jpg" />
+
+    <h2>Window</h2>
+    <img class="lazy" data-src="img/Unsplash-1078783-Window.jpg" />
+
+    <h1>End</h1>
+
 
   </body>
 </html>
