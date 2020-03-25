@@ -4,23 +4,21 @@
   <head>
     <title>Mini-K</title>
 
-    <link rel="stylesheet" type="text/css" href="include/style.css">
+    <link rel="stylesheet" type="text/css" href="include/style.css" />
 
     <!-- lazy loading -->
     <script type="text/javascript" src="include/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="include/jquery.lazy.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
-
+      $(document).ready(function () {
         // alert('Document Ready!');
 
         $(".lazy").Lazy({
-
           // Configuration
           // Default scroll direction is 'both'
           // To use fadeIn, threshold must be 0
 
-          scrollDirection: 'vertical',
+          scrollDirection: "vertical",
           visibleOnly: true,
           effect: "fadeIn",
           effectTime: 2000,
@@ -44,17 +42,14 @@
           //   // called once all elements was handled
           //   console.log("Lazy finished");
           // }
-
         });
-
       });
     </script>
   </head>
 
   <body>
-
     <!-- First image does not use lazy load -->
-    <h1>Shown by Default</h1>
+    <h1>Shown by Default (BIG)</h1>
     <img src="img/airbnb.jpg" />
 
     <!-- Background image lazy load -->
@@ -104,7 +99,5 @@
     <img class="lazy" data-src="img/Unsplash-1078783-Window.jpg" />
 
     <h1>End</h1>
-
-
   </body>
 </html>
