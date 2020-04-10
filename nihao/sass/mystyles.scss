@@ -1,37 +1,229 @@
 @charset "utf-8";
 
-// Import a Google Font
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
-
 // Set your brand colors
-$purple: #8a4d76;
-$pink: #fa7c91;
-$brown: #757763;
-$beige-light: #d0d1cd;
-$beige-lighter: #eff0eb;
+$white: #fff;
+$black: #000;
+$gray1: #f7f7f5;
+$gray2: #f0efeb;
+$gray3: #e8e7e1;
+$gray4: #dedbd5;
+$gray5: #c7c3bd;
+$gray6: #918c87;
+$gray7: #29261f;
+$gray8: #080606;
+$orange1: #fbe3dc;
+$orange2: #eac6bc;
+$orange3: #eca393;
+$orange4: #fc8772;
+$orange5: #fa7060;
+$orange6: #ff6060;
+$orange7: #e04e4c;
+$orange8: #b03b39;
+$yellow1: #fff8ba;
+$yellow2: #ffdb2e;
+$yellow3: #efc582;
+$yellow4: #764843;
+$green1: #f5f8b0;
+$green2: #d9dc84;
+$green3: #90c447;
+$green4: #3a7e75;
+$blue1: #e0eaeb;
+$blue2: #bddedb;
+$blue3: #99c2cf;
+$blue4: #023a61;
+$purple1: #cddce9;
+$pueple2: #c8cfd7;
+$purple3: #c1afc7;
+$purple4: #4b5868;
+
+// Import webfont CSS files
+@import "../font/Gordita.css";
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
-$widescreen-enabled: false;
+$family-sans-serif: "Gordita-Regular", sans-serif;
+$family-bold: "Gordita-Bold", sans-serif;
+html {
+  font-size: 100%;
+  /* This means 16px by default */
+}
+$size-1: 6.25rem;
+$size-2: 3rem;
+$size-3: 2rem;
+$size-4: 1.8rem;
+$size-5: 1.2rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+$grey-dark: $gray8;
+$grey-light: $gray2;
+$primary: $orange6;
+$link: $orange8;
+$column-gap: 1.5rem;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: $white;
 $control-border-width: 2px;
-$input-border-color: transparent;
+$input-border-color: $gray4;
 $input-shadow: none;
+
+// Update or create global classes
+
+.section {
+  border: 1px dotted $gray6;
+}
+.container {
+  border: 1px dotted $gray5;
+}
+.column {
+  border: 1px dotted $gray4;
+}
+.column-fill {
+  display: flex;
+  background-color: rgba(255, 255, 0, 0.2);
+}
+figure,
+figure img {
+  background-color: $gray5;
+  width: 100%;
+  height: 100%;
+}
+.has-text-weight-bold,
+strong {
+  font-family: $family-bold !important;
+  font-weight: normal !important;
+}
+.border-bottom {
+  border-bottom: 1px solid $gray3;
+}
+.stretch-vertical {
+  display: flex !important;
+  align-items: stretch;
+}
+.is-vertical-middle {
+  display: flex;
+  align-items: center;
+}
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/layout/hero.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+
+// Style Navbar
+
+.navbar {
+  @include from($tablet) {
+    min-height: 5rem;
+  }
+}
+
+// Style Hero section
+.hero {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  h1.headline {
+    margin-left: -0.12em;
+    color: $black;
+    line-height: 1.2;
+  }
+  .tagline {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-left: 3px solid $gray8;
+    line-height: 2;
+  }
+  .cta-main {
+    margin-top: 3rem;
+  }
+}
+
+// Style Portfolio section
+.portfolio {
+  margin-bottom: 2rem;
+  h2.category-name {
+    margin-bottom: 0.4rem;
+  }
+  .category-description {
+    margin-bottom: 2rem;
+    color: $gray6;
+  }
+  .project-card {
+    position: relative;
+    width: 100%;
+    .image {
+      min-height: 465px;
+      border-radius: 1rem;
+      overflow: hidden;
+      img {
+      }
+    }
+    .text {
+      position: absolute;
+      bottom: 1.8rem;
+      left: 6%;
+      width: 87.9%;
+      border: 1px dotted $yellow1;
+      color: $white;
+      .project-name {
+        margin-bottom: 0.3rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+// Style About section
+.about {
+  margin-bottom: 2rem;
+  &.intro {
+    margin-top: 8rem;
+  }
+  &.talks {
+    margin-bottom: 8rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    &.my-name {
+      margin-bottom: 4rem;
+    }
+  }
+  .intro-description {
+    width: 70%;
+    margin: 0 14.9%;
+    line-height: 1.8;
+  }
+  .about-description {
+    color: $gray6;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &.intro figure {
+    margin-left: 2rem;
+  }
+  &.skills figure {
+    margin: 2.9%;
+    width: 94%;
+    height: 94%;
+  }
+  &.media {
+    figure {
+      margin: 1rem;
+    }
+  }
+}
+
+// Style Bottom and Footer sections
+.bottom {
+  margin: 6rem 0;
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+.footer {
+  padding-bottom: 4rem;
+  color: $gray6;
+}
