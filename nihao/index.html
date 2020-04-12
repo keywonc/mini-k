@@ -11,11 +11,11 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://mini-k.com">
+          <a class="navbar-item logo" href="https://mini-k.com">
             <img
+              class=""
+              alt="Mini-K"
               src="img/brand/logo-landscape-black.svg"
-              width="130"
-              height="26"
             />
           </a>
           <!-- <a
@@ -50,20 +50,20 @@
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <div class="columns stretch-vertical">
-            <div class="column is-7">
+          <div class="columns">
+            <div class="column is-9 headline">
               <div class="column-fill">
-                <h1 class="is-size-1 headline">Build stuff that sells.</h1>
+                <h1 class="website-headline">Build stuff <br />that sells.</h1>
               </div>
             </div>
-            <div class="column is-3 is-offset-2 stretch-vertical">
-              <div class="column-fill is-size-5 tagline">
+            <div class="column is-3 stretch-vertical">
+              <div class="column-fill tagline">
                 You love building things. You want to validate your offering.
                 Let’s find your product-market fit.
               </div>
             </div>
           </div>
-          <a class="button is-primary is-large has-text-weight-bold cta-main">
+          <a class="button is-primary is-large cta-main">
             Let's Work Together
           </a>
         </div>
@@ -72,39 +72,77 @@
     <!-- Growth -->
     <section class="section portfolio growth">
       <div class="container">
-        <h2 class="category-name is-size-4 has-text-weight-bold">Growth</h2>
-        <p class="category-description">Find your niche, turn them into customers, and grow your audience.</p>
+        <h2 class="category-name">Growth</h2>
+        <p class="category-description">
+          Find your niche, turn them into customers, grow your audience.
+        </p>
         <div class="columns is-centered">
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/Temp-ProjectThumb-FacebookAd.png">
-              </figure>
+          <!-- Facebook -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card facebook">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/facebook-lines.svg" />
+                <img class="shadow" src="img/portfolio/facebook-shadow.svg" />
+                <img class="photo" src="img/portfolio/facebook-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Facebook Ad</h3>
-                <p class="project-description is-size-6">Sold serious-game design class with Facebook ads at ROAS 3.9</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/facebook-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Facebook Ad</h3>
+                  <p class="project-description">
+                    Sold game design class with Facebook ads at ROAS 3.9
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/Temp-ProjectThumb-Airbnb.png">
-              </figure>
+          <!-- Airbnb -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card airbnb">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/airbnb-lines.svg" />
+                <img class="shadow" src="img/portfolio/airbnb-shadow.svg" />
+                <img class="photo" src="img/portfolio/airbnb-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Airbnb</h3>
-                <p class="project-description is-size-6">Met Superhost criteria in 30 days with my Korean house</p>
+                <img class="triangle" src="img/portfolio/airbnb-triangle.svg" />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Airbnb</h3>
+                  <p class="project-description">
+                    Met Superhost criteria in 30 days with my Korean house
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/Temp-ProjectThumb-YouTube.png">
-              </figure>
+          <!-- YouTube -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card youtube">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/youtube-lines.svg" />
+                <img class="shadow" src="img/portfolio/youtube-shadow.svg" />
+                <img class="photo" src="img/portfolio/youtube-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">YouTube</h3>
-                <p class="project-description is-size-6">Grew a YouTube channel to 9,000 subscribers in 8 months</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/youtube-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">YouTube</h3>
+                  <p class="project-description">
+                    Gained 9,000 subscribers for a hobby channel in 8 months
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -114,74 +152,149 @@
     <!-- Service -->
     <section class="section portfolio service">
       <div class="container">
-        <h2 class="category-name is-size-4 has-text-weight-bold">Service Design</h2>
-        <p class="category-description">Product, space, and UX design, visual design and branding, HTML and CSS.</p>
+        <h2 class="category-name">Service Design</h2>
+        <p class="category-description">
+          Product/UX/space design. Visual design and branding. HTML and CSS
+          implementation.
+        </p>
         <div class="columns is-centered">
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Jakdang -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card jakdang">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/jakdang-lines.svg" />
+                <!-- <img class="shadow" src="img/portfolio/jakdang-shadow.svg">
+                <img class="photo" src="img/portfolio/jakdang-photo.png"> -->
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Jakdang</h3>
-                <p class="project-description is-size-6">Personal branding and website for a serious game designer</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/jakdang-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Jakdang</h3>
+                  <p class="project-description">
+                    Personal branding and website for a serious game designer
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- HeyCongress -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card heycongress">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="photo" src="img/portfolio/heycongress-photo.jpg" />
+                <img class="lines" src="img/portfolio/heycongress-lines.svg" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Jumpstart Recovery</h3>
-                <p class="project-description is-size-6">Parametric earthquake insurance for young Californians</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/heycongress-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">HeyCongress</h3>
+                  <p class="project-description">
+                    Blow up your representative’s inbox during a national crisis
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Hello Money -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card hellomoney">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/hellomoney-lines.svg" />
+                <img class="shadow" src="img/portfolio/hellomoney-shadow.svg" />
+                <img class="photo" src="img/portfolio/hellomoney-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Hello Money</h3>
-                <p class="project-description is-size-6">Personal investing simulator that hit No. 1 on Product Hunt</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/hellomoney-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Hello Money</h3>
+                  <p class="project-description">
+                    Personal investing simulator that hit No. 1 on Product Hunt
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="columns is-centered">
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Jumpstart -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card jumpstart">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/jumpstart-lines.svg" />
+                <img class="shadow" src="img/portfolio/jumpstart-shadow.svg" />
+                <img class="photo" src="img/portfolio/jumpstart-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">HeyCongress</h3>
-                <p class="project-description is-size-6">Blow up your representative’s inbox during a national crisis</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/jumpstart-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Jumpstart</h3>
+                  <p class="project-description">
+                    Parametric earthquake insurance for
+                    <span class="is-hidden-desktop-only">young </span
+                    >Californians
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- GGS -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card ggs">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/ggs-lines.svg" />
+                <img class="shadow" src="img/portfolio/ggs-shadow.svg" />
+                <img class="photo" src="img/portfolio/ggs-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Goodbye Gun Stocks</h3>
-                <p class="project-description is-size-6">Screen out gun stocks from your mutual fund/ETF portfolio</p>
+                <img class="triangle" src="img/portfolio/ggs-triangle.svg" />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Goodbye Guns</h3>
+                  <p class="project-description">
+                    Screen out gun stocks from your mutual fund/ETF portfolio
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Hanok -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card hanok">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="photo" src="img/portfolio/hanok-photo.jpg" />
+                <img class="lines" src="img/portfolio/hanok-lines.svg" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Hanok Studio</h3>
-                <p class="project-description is-size-6">You’re not selling space, you’re selling time</p>
+                <img class="triangle" src="img/portfolio/hanok-triangle.svg" />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Hanok Studio</h3>
+                  <p class="project-description">
+                    You’re not selling space, you’re selling time
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -191,39 +304,74 @@
     <!-- Interaction -->
     <section class="section portfolio interaction">
       <div class="container">
-        <h2 class="category-name is-size-4 has-text-weight-bold">Interaction Design</h2>
-        <p class="category-description">In my past life, I developed wearable and gesture interfaces.</p>
+        <h2 class="category-name">Interaction Design</h2>
+        <p class="category-description">
+          In my past life, I developed wearable and gesture interfaces.
+        </p>
         <div class="columns is-centered">
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- The Big C -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card bigc">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/bigc-lines.svg" />
+                <img class="shadow" src="img/portfolio/bigc-shadow.svg" />
+                <img class="photo" src="img/portfolio/bigc-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">The Big C</h3>
-                <p class="project-description is-size-6">Wearable interface performance for a SHOWTIME TV event</p>
+                <img class="triangle" src="img/portfolio/bigc-triangle.svg" />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">The Big C</h3>
+                  <p class="project-description">
+                    Wearable tech performance for a SHOWTIME TV event
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- OnObject -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card onobject">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/onobject-lines.svg" />
+                <img class="shadow" src="img/portfolio/onobject-shadow.svg" />
+                <img class="photo" src="img/portfolio/onobject-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">OnObject</h3>
-                <p class="project-description is-size-6">Program everyday objects with your hand gestures</p>
+                <img
+                  class="triangle"
+                  src="img/portfolio/onobject-triangle.svg"
+                />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">OnObject</h3>
+                  <p class="project-description">
+                    Program everyday objects with your hand gestures
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Stress OutSourced -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card sos">
+              <img class="rect" src="img/portfolio/rect-300x400.svg" />
+              <div class="parallax">
+                <img class="lines" src="img/portfolio/sos-lines.svg" />
+                <img class="shadow" src="img/portfolio/sos-shadow.svg" />
+                <img class="photo" src="img/portfolio/sos-photo.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Stress OutSourced</h3>
-                <p class="project-description is-size-6">Remote massage network for anonymous connections</p>
+                <img class="triangle" src="img/portfolio/sos-triangle.svg" />
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">StressOutSourced</h3>
+                  <p class="project-description">
+                    Haptic social network for global solidarity
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -234,58 +382,87 @@
     <section class="section portfolio strategy">
       <div class="container">
         <h2 class="category-name is-size-4 has-text-weight-bold">Strategy</h2>
-        <p class="category-description">I offer spot consulting for various startup issues and deliver recommendations in a mobile-friendly report.</p>
+        <p class="category-description">
+          I offer spot consulting for early startup challenges and deliver
+          recommendations in a mobile-friendly report.
+        </p>
         <div class="columns is-centered">
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Soundable -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card soundable">
+              <img class="rect" src="img/portfolio/soundable-rect.svg" />
+              <div class="parallax">
+                <img class="book-shadow" src="img/portfolio/book-shadow.svg" />
+                <img class="book" src="img/portfolio/soundable-book.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Soundable</h3>
-                <p class="project-description is-size-6">Branding & UX requirements for a urinary flow monitoring app</p>
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Soundable</h3>
+                  <p class="project-description">
+                    Branding/UX requirements for a urinary flow monitoring app
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- New Dongne -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card newdongne">
+              <img class="rect" src="img/portfolio/newdongne-rect.svg" />
+              <div class="parallax">
+                <img class="book-shadow" src="img/portfolio/book-shadow.svg" />
+                <img class="book" src="img/portfolio/newdongne-book.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">Healthmade</h3>
-                <p class="project-description is-size-6">Naming & value proposition for diabetes resources website</p>
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">New Dongne</h3>
+                  <p class="project-description">
+                    Marketing strategy for a housing subscription service
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="column-fill project-card is-3by4">
-              <figure class="image">
-                <img alt="Project" src="img/portfolio/#">
-              </figure>
+          <!-- Healthmade -->
+          <div class="column is-4 project-column">
+            <div class="column-fill project-card healthmade">
+              <img class="rect" src="img/portfolio/healthmade-rect.svg" />
+              <div class="parallax">
+                <img class="book-shadow" src="img/portfolio/book-shadow.svg" />
+                <img class="book" src="img/portfolio/healthmade-book.png" />
+              </div>
               <div class="text">
-                <h3 class="project-name is-size-4">New Dongne</h3>
-                <p class="project-description is-size-6">Marketing strategy for a membership-based housing service</p>
+                <img class="shine" src="img/portfolio/shine-360x480.png" />
+                <div class="just-box">
+                  <h3 class="project-name">Healthmade</h3>
+                  <p class="project-description">
+                    Naming & value proposition for diabetes resources website
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
     <!-- About -->
     <section class="section about intro">
       <div class="container">
-        <h2 class="my-name is-size-2 has-text-weight-bold">Hi, I'm Keywon</h2>
-        <div class="columns is-centered is-mobile is-gapless">
-          <div class="column is-5 border-bottom">
+        <h2 class="my-name">Hi, I'm Keywon</h2>
+        <div class="columns is-centered is-gapless">
+          <div class="column is-5 borderline">
             <div class="column-fill">
-              <figure class="image">
-                <img src="img/about/Keywon-BlueShirt1.jpg">
+              <figure class="image photo">
+                <img src="img/about/Keywon-BlueShirt1.jpg" />
               </figure>
             </div>
           </div>
-          <div class="column is-6 stretch-vertical border-bottom">
-            <div class="column-fill is-vertical-middle intro-description">
-              <p class="is-size-4">I design pilot products and ad creatives for startup teams, so you can quickly run market tests and find product-market fit.</p>
+          <div class="column is-6 stretch-vertical borderline">
+            <div class="column-fill is-vertical-middle my-mission">
+              I design pilot products and ad creatives for startup teams, so you
+              can quickly run market tests and find product-market fit.
             </div>
           </div>
         </div>
@@ -294,102 +471,149 @@
     <!-- Skills -->
     <section class="section about skills">
       <div class="container">
-        <h2 class="about-title is-size-4 has-text-weight-bold">Funky Mix of Skills</h2>
-        <p class="about-description">I enjoy working with pen and paper, design tools, spreadsheets, and code editors alike.</p>
-        <div class="columns is-centered">
-          <div class="column is-11">
+        <h2 class="">Funky Mix of Skills</h2>
+        <p class="about-description">
+          I enjoy working with pen and paper, design tools, spreadsheets, and
+          code editors alike.
+        </p>
+        <div class="columns is-centered is-multiline is-mobile grid">
+          <div
+            class="column is-half-mobile is-one-quarter-tablet skill-column paper"
+          >
             <div class="column-fill">
-                <div class="columns is-gapless">
-                  <div class="column is-3">
-                    <figure class="image">
-                      <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                  </div>
-                  <div class="column is-3">
-                    <figure class="image">
-                      <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                  </div>
-                  <div class="column is-3">
-                    <figure class="image">
-                      <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                  </div>
-                  <div class="column is-3">
-                    <figure class="image">
-                      <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                  </div>
-                </div>
+              <figure class="image">
+                <img src="img/about/rect-300x300.svg" />
+                <img class="photo" src="img/about/skills-paper.jpg" />
+              </figure>
+            </div>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet skill-column">
+            <div class="column-fill">
+              <figure class="image">
+                <img src="img/about/rect-300x300.svg" />
+                <img class="photo" src="img/about/skills-design6.png" />
+              </figure>
+            </div>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet skill-column">
+            <div class="column-fill">
+              <figure class="image">
+                <img src="img/about/rect-300x300.svg" />
+                <img class="photo" src="img/about/skills-spreadsheet2.png" />
+              </figure>
+            </div>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet skill-column">
+            <div class="column-fill">
+              <figure class="image">
+                <img src="img/about/rect-300x300.svg" />
+                <img class="photo" src="img/about/skills-terminal.png" />
+              </figure>
             </div>
           </div>
         </div>
-        <p class="about-description">I also do improv comedy and travel a lot.</p>
+        <p class="about-description">
+          I also do improv comedy and travel a lot.
+        </p>
       </div>
     </section>
     <!-- Press -->
     <section class="section about media">
       <div class="container">
-        <h2 class="is-size-4 has-text-weight-bold">Press</h2>
-        <p class="about-description">My work has been featured in...</p>
+        <h2 class="">Press</h2>
+        <p class="about-description">
+          My work has been featured in...
+        </p>
         <!-- Press row 1 -->
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-3">
+        <div class="columns is-centered is-vcentered is-mobile tight-columns">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/yahoo.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-fastcompany-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Facebook.svg">
+                <img
+                  class="logo good"
+                  alt="Logo"
+                  src="img/media/press-logo-good-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/GS Shop.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-huffpost-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column is-hidden-mobile">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Hyundai Card.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-newyorkdailynews-black.svg"
+                />
               </figure>
             </div>
           </div>
         </div>
         <!-- Press row 2 -->
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-3">
+        <div class="columns is-centered is-vcentered is-mobile tight-columns">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/GS Shop.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-fortune-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Hyundai Card.svg">
+                <img
+                  class="logo reuters"
+                  alt="Logo"
+                  src="img/media/press-logo-reuters-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Facebook.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-money-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column is-hidden-mobile">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/yahoo.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/press-logo-vice-black.svg"
+                />
               </figure>
             </div>
           </div>
@@ -397,87 +621,122 @@
       </div>
     </section>
     <!-- Talks -->
-    <section class="section about media">
+    <section class="section about media talks">
       <div class="container">
-        <h2 class="is-size-4 has-text-weight-bold">Talks & Shows</h2>
-        <p class="about-description">My work has been presented in...</p>
+        <h2 class="">Talks & Events</h2>
+        <p class="about-description">
+          My work has been shown in...
+        </p>
         <!-- Talks row 1 -->
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-3">
+        <div class="columns is-centered is-vcentered is-mobile tight-columns">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/yahoo.svg">
+                <img
+                  class="logo uxcamp"
+                  alt="Logo"
+                  src="img/media/show-logo-uxcamp-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Facebook.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/show-logo-tedx-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/GS Shop.svg">
+                <img
+                  class="logo segd"
+                  alt="Logo"
+                  src="img/media/show-logo-segd-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column is-hidden-mobile">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Hyundai Card.svg">
+                <img
+                  class="logo sebashi"
+                  alt="Logo"
+                  src="img/media/show-logo-sebashi-black.svg"
+                />
               </figure>
             </div>
           </div>
         </div>
         <!-- Talks row 2 -->
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-3">
+        <div class="columns is-centered is-vcentered is-mobile tight-columns">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/GS Shop.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/show-logo-sigchi-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Hyundai Card.svg">
+                <img
+                  class="logo aiga"
+                  alt="Logo"
+                  src="img/media/show-logo-aiga-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/Facebook.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/show-logo-siggraph-black.svg"
+                />
               </figure>
             </div>
           </div>
-          <div class="column is-3">
+          <div class="column media-column is-hidden-mobile">
             <div class="column-fill">
               <figure class="image">
-                <img class="" alt="Logo" src="img/media/yahoo.svg">
+                <img
+                  class="logo"
+                  alt="Logo"
+                  src="img/media/show-logo-uist-black.svg"
+                />
               </figure>
             </div>
           </div>
         </div>
       </div>
     </section>
-      
+
     <section class="bottom">
       <div class="container has-text-centered">
-        <h2 class="is-size-2 has-text-weight-bold">Build stuff that sells.</h2>
-        <a class="button is-primary is-large has-text-weight-bold cta-main">
-            Let's Work Together
-          </a>
+        <h1 class="website-headline">Build stuff that sells.</h1>
+        <a class="button is-primary is-large cta-main">
+          Let's Work Together
+        </a>
       </div>
     </section>
-    
+
     <section class="footer">
       <div class="container has-text-centered is-size-7">
-          Copyright © 2020 Keywon Chung &nbsp;&nbsp; | &nbsp;&nbsp; All Rights Reserved
+        Copyright © 2020 Keywon Chung &nbsp;&nbsp; | &nbsp;&nbsp; All Rights
+        Reserved
       </div>
     </section>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="480px" viewBox="0 0 360 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Lines</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Home" transform="translate(-540.000000, -1454.000000)">
+            <g id="Project-Thumb---Jumpstart" transform="translate(540.000000, 1454.000000)">
+                <g id="Lines" transform="translate(18.000000, -61.000000)">
+                    <line x1="0" y1="355.413093" x2="354.413093" y2="1" id="Line-3" stroke="#FFE8DA" stroke-width="83"></line>
+                    <line x1="0" y1="416.413093" x2="354.413093" y2="62" id="Line-3" stroke="#FFD9D2" stroke-width="83"></line>
+                    <line x1="8" y1="624.413093" x2="362.413093" y2="270" id="Line-3" stroke="#FFC8C8" stroke-width="300"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

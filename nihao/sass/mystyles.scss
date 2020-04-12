@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+// VARIABLES --------------------
+
 // Set your brand colors
 $white: #fff;
 $black: #000;
@@ -36,29 +38,33 @@ $pueple2: #c8cfd7;
 $purple3: #c1afc7;
 $purple4: #4b5868;
 
-// Import webfont CSS files
-@import "../font/Gordita.css";
-
-// Update Bulma's global variables
-$family-sans-serif: "Gordita-Regular", sans-serif;
-$family-bold: "Gordita-Bold", sans-serif;
-html {
-  font-size: 100%;
-  /* This means 16px by default */
-}
-$size-1: 6.25rem;
-$size-2: 3rem;
-$size-3: 2rem;
-$size-4: 1.8rem;
+$size-1l: 6.25rem;
+$size-1: 5.5rem;
+$size-1s: 5rem;
+$size-2l: 4rem;
+$size-2: 3.5rem;
+$size-2s: 3rem;
+$size-3l: 2.6rem;
+$size-3: 2.3rem;
+$size-3s: 2rem;
+$size-4l: 1.7rem;
+$size-4: 1.6rem;
+$size-4s: 1.4rem;
+$size-5l: 1.3rem;
 $size-5: 1.2rem;
+$size-5s: 1.1rem;
+$size-6l: 1.05rem;
 $size-6: 1rem;
+$size-6s: 0.9rem;
+$size-7l: 0.8rem;
 $size-7: 0.75rem;
+$size-7s: 0.7rem;
 $grey-dark: $gray8;
 $grey-light: $gray2;
 $primary: $orange6;
 $link: $orange8;
 $column-gap: 1.5rem;
-$fullhd-enabled: false;
+$fullhd-enabled: true;
 
 // Update some of Bulma's component variables
 $body-background-color: $white;
@@ -66,43 +72,14 @@ $control-border-width: 2px;
 $input-border-color: $gray4;
 $input-shadow: none;
 
-// Update or create global classes
+// Update Bulma's global variables
+$family-sans-serif: "Gordita-Regular", sans-serif;
+$family-bold: "Gordita-Bold", sans-serif;
 
-.section {
-  border: 1px dotted $gray6;
-}
-.container {
-  border: 1px dotted $gray5;
-}
-.column {
-  border: 1px dotted $gray4;
-}
-.column-fill {
-  display: flex;
-  background-color: rgba(255, 255, 0, 0.2);
-}
-figure,
-figure img {
-  background-color: $gray5;
-  width: 100%;
-  height: 100%;
-}
-.has-text-weight-bold,
-strong {
-  font-family: $family-bold !important;
-  font-weight: normal !important;
-}
-.border-bottom {
-  border-bottom: 1px solid $gray3;
-}
-.stretch-vertical {
-  display: flex !important;
-  align-items: stretch;
-}
-.is-vertical-middle {
-  display: flex;
-  align-items: center;
-}
+// IMPORT --------------------
+
+// Import webfont CSS files
+@import "../font/Gordita.css";
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -113,30 +90,262 @@ strong {
 @import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
 
-// Style Navbar
+// GLOBAL MIXINS & CLASSES --------------------
 
-.navbar {
+// Custom Mixins
+@mixin description-text {
+  font-size: $size-6;
+  line-height: 1.7;
+}
+@mixin vertical-middle {
+  display: flex;
+  align-items: center;
+}
+@mixin stretch-vertical {
+  display: flex !important;
+  align-items: stretch;
+}
+@mixin text-weight-regular {
+  font-family: $family-sans-serif !important;
+  font-weight: normal !important;
+}
+@mixin text-weight-bold {
+  font-family: $family-bold !important;
+  font-weight: normal !important;
+}
+@mixin tight-horizontal-column {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   @include from($tablet) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@mixin tight-vertical-column {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  @include from($tablet) {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+}
+@mixin relative-w100-h100 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@mixin absolute-w100-h100 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@mixin absolute-t0-l0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@mixin absolute-b0-l0 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@mixin img-w100-hauto {
+  width: 100%;
+  height: auto;
+}
+/* @mixin parallax-parent {
+  display: block;
+  position: relative;
+  perspective: 1px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+@mixin parallax-layer {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@mixin parallax-layer-1 {
+  // background
+  transform: translateZ(-1px) scale(2);
+}
+@mixin parallax-layer-2 {
+  // middle
+  transform: translateZ(0) scale(1);
+}
+@mixin parallax-layer-3 {
+  // foreground
+  transform: translateZ(1px);
+} */
+
+// Set Root font size
+html {
+  /* font size for html = 1rem */
+  /* 100% means 16px by default */
+  /* 1vw = 1% of screen width */
+  /* mobile-first media query */
+  font-size: 92%;
+  @include from($tablet) {
+    font-size: 95%;
+  }
+  @include from($desktop) {
+    font-size: 100%;
+  }
+  /* override elements that don't inherit */
+  button {
+    font-size: inherit;
+  }
+  input {
+    font-size: inherit;
+  }
+}
+
+// Display wireframe
+/* .section {
+  border: 1px dotted $gray6;
+}
+.container {
+  border: 1px dotted $gray5;
+}
+.column {
+  border: 1px dotted $gray4;
+}
+.column-fill {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+figure {
+  background-color: $gray4;
+}
+figure img {
+  background-color: $gray5;
+} */
+
+// Update or create global classes
+
+.column-fill {
+  display: flex;
+}
+figure,
+figure img {
+  width: 100%;
+  height: 100%;
+}
+.button.is-large {
+  font-size: $size-5l;
+  @include from($tablet) {
+    font-size: $size-4;
+  }
+}
+strong,
+.strong {
+  @include text-weight-bold();
+}
+.stretch-vertical {
+  display: flex !important;
+  align-items: stretch;
+}
+.is-vertical-middle {
+  display: flex;
+  align-items: center;
+}
+.tight-columns {
+  margin-left: 0;
+  margin-right: 0;
+  @include from($tablet) {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+.website-headline {
+  color: $black;
+  line-height: 1.2;
+}
+.cta-main {
+  @include text-weight-bold();
+}
+
+// SECTIONS --------------------
+
+// Style Navbar header
+.navbar {
+  .logo {
+    padding: 0 1.5rem;
+  }
+  .logo img {
+    width: 4rem;
+    height: 0.8rem;
+  }
+  @include from($tablet) {
+    padding: 0 1.5rem;
+    .container {
+      max-width: 100%;
+    }
+    .logo {
+      padding: 0;
+    }
+    .logo img {
+      width: 7rem;
+      height: 1.4rem;
+    }
+  }
+  @include from($desktop) {
     min-height: 5rem;
+    .navbar-brand {
+      margin-left: 0 !important;
+    }
   }
 }
 
 // Style Hero section
 .hero {
-  margin-top: 2rem;
-  margin-bottom: 8rem;
-  h1.headline {
+  .hero-body {
+    padding: 1rem 1.5rem;
+  }
+  .headline {
+    padding-bottom: 0;
+  }
+  .website-headline {
+    font-size: $size-2l;
     margin-left: -0.12em;
-    color: $black;
-    line-height: 1.2;
   }
   .tagline {
-    padding: 0.5rem 0 0.5rem 1.5rem;
-    border-left: 3px solid $gray8;
-    line-height: 2;
+    font-size: $size-6;
+    line-height: 1.7;
   }
-  .cta-main {
-    margin-top: 3rem;
+  @include from($tablet) {
+    .hero-body {
+      padding: 3rem 1.5rem;
+    }
+    .website-headline {
+      font-size: $size-1l;
+    }
+    .tagline {
+      padding: 0.5rem 0 0.5rem 1rem;
+      border-left: 3px solid $gray8;
+      line-height: 2;
+    }
+    .cta-main {
+      margin-top: 3rem;
+    }
+  }
+  @include from($desktop) {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    .columns {
+      @include stretch-vertical();
+    }
+    .headline {
+      padding-bottom: $column-gap;
+    }
+    .tagline {
+      padding-left: 1.5rem;
+      font-size: $size-5;
+    }
   }
 }
 
@@ -145,85 +354,354 @@ strong {
   margin-bottom: 2rem;
   h2.category-name {
     margin-bottom: 0.4rem;
+    font-size: $size-4;
+    @include text-weight-bold();
   }
   .category-description {
-    margin-bottom: 2rem;
+    @include description-text();
+    margin-bottom: 1rem;
     color: $gray6;
+    @include from($tablet) {
+      margin-bottom: 2rem;
+    }
   }
-  .project-card {
-    position: relative;
-    width: 100%;
-    .image {
-      min-height: 465px;
-      border-radius: 1rem;
-      overflow: hidden;
-      img {
+  .columns {
+    margin-top: 0;
+    @include from($tablet) {
+      margin-top: -1.5rem;
+    }
+  }
+}
+
+// Style Project thumbnail component
+.project-column {
+  @include tight-vertical-column();
+}
+.project-card {
+  @include relative-w100-h100();
+  overflow: hidden;
+  border-radius: 1rem;
+  .rect {
+    @include relative-w100-h100();
+  }
+  .parallax {
+    @include absolute-w100-h100();
+    & > img {
+      @include absolute-t0-l0();
+      @include img-w100-hauto();
+    }
+    .shadow {
+      opacity: 0.6;
+    }
+    .book-shadow {
+      opacity: 0.1;
+      top: 10%;
+      left: 20%;
+      width: 66%;
+    }
+    .book {
+      top: 8%;
+      left: 15%;
+      width: 64%;
+    }
+  }
+  .text {
+    @include absolute-w100-h100();
+    .triangle,
+    .shine {
+      @include absolute-b0-l0();
+      @include img-w100-hauto();
+    }
+    .shine {
+      opacity: 0.25;
+    }
+    .just-box {
+      @include relative-w100-h100();
+      color: $white;
+      & > h3,
+      & > p {
+        position: absolute;
+        top: 72%;
+        left: 7%;
+        width: 87%;
+      }
+      .project-name {
+        top: 73%;
+        font-size: 7.2vw;
+        line-height: 1;
+        @include from($tablet) {
+          font-size: 2.4vw;
+        }
+        @include from($desktop) {
+          font-size: $size-4l;
+        }
+        @include from($fullhd) {
+          font-size: $size-3;
+        }
+      }
+      .project-description {
+        top: 82%;
+        @include description-text();
+        font-size: 4.5vw;
+        line-height: 1.5;
+        @include from($tablet) {
+          font-size: 1.4vw;
+        }
+        @include from($desktop) {
+          font-size: $size-6;
+        }
+        @include from($fullhd) {
+          font-size: $size-5;
+        }
       }
     }
-    .text {
-      position: absolute;
-      bottom: 1.8rem;
-      left: 6%;
-      width: 87.9%;
-      border: 1px dotted $yellow1;
-      color: $white;
-      .project-name {
-        margin-bottom: 0.3rem;
-        line-height: 1.2;
-      }
+  }
+  // project-specific tweaks
+  &.airbnb {
+    .photo {
+      top: 10%;
+    }
+    .shadow {
+      top: 7%;
+    }
+  }
+  &.youtube {
+    .photo {
+      left: auto;
+      right: 0;
+      width: 70%;
+    }
+    .shadow {
+      top: 2%;
+      left: auto;
+      right: 8%;
+      width: 75%;
+    }
+  }
+  &.jumpstart {
+    .photo {
+      top: 3%;
+      left: auto;
+      right: 0;
+      width: 76%;
+    }
+    .shadow {
+      top: -5%;
+      left: auto;
+      right: 0%;
+      width: 90%;
+    }
+  }
+  &.hellomoney {
+    .photo {
+      top: 2%;
+      left: 20%;
+      width: 58%;
+    }
+    .shadow {
+      top: 5%;
+      left: 24%;
+      width: 60%;
+    }
+  }
+  &.heycongress,
+  &.hanok {
+    .lines {
+      opacity: 0.15;
+    }
+  }
+  &.ggs {
+    .photo {
+      top: 5%;
+      left: 5%;
+      width: 95%;
+    }
+    .shadow {
+      top: 10%;
+      left: 0;
+    }
+  }
+  &.bigc {
+    .photo {
+      width: 98%;
+    }
+    .shadow {
+      top: -5%;
+      left: -4%;
+    }
+  }
+  &.onobject {
+    .photo {
+      top: -5%;
+      left: 30%;
+      width: 60%;
+    }
+    .shadow {
+      top: -3%;
+      left: 33%;
+      width: 62%;
+    }
+  }
+  &.sos {
+    .photo {
+      width: 55%;
+    }
+    .shadow {
+      left: 15%;
+      width: 55%;
     }
   }
 }
 
 // Style About section
 .about {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: $size-4;
+    @include text-weight-bold();
+  }
+  .about-description {
+    @include description-text();
+    color: $gray6;
+    color: $gray6;
+    text-align: center;
+    margin: 2rem 0;
+  }
   &.intro {
     margin-top: 8rem;
+    .my-name {
+      margin-bottom: 2rem;
+      font-size: $size-3;
+      @include text-weight-bold();
+    }
+    figure.photo {
+      margin: 0 3rem;
+    }
+    .my-mission {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: $size-5;
+      line-height: 1.8;
+    }
+    .is-5.borderline {
+      border-bottom: 1px solid $gray3 !important;
+    }
+  }
+  &.skills {
+    .grid {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .skill-column {
+      @include tight-vertical-column();
+      @include tight-horizontal-column();
+    }
+    .image {
+      @include relative-w100-h100();
+      background-color: $gray2;
+      border-radius: 50%;
+      overflow: hidden;
+      .photo {
+        position: absolute;
+        max-width: 1200px;
+        width: 220%;
+        top: 10%;
+        left: 10%;
+      }
+    }
+    .paper .photo {
+      width: 185%;
+      top: -2%;
+      left: -38%;
+    }
+  }
+  &.media {
+    border-top: none;
+    .media-column {
+      @include tight-horizontal-column();
+    }
+    figure {
+      //margin: 1rem;
+    }
+    .logo {
+      opacity: 0.4;
+      max-height: 2rem;
+    }
+    .logo.sebashi,
+    .logo.segd,
+    .logo.aiga,
+    .logo.uxcamp {
+      max-height: 3rem;
+    }
   }
   &.talks {
     margin-bottom: 8rem;
   }
-  h2 {
-    margin-bottom: 1rem;
-    text-align: center;
-    &.my-name {
-      margin-bottom: 4rem;
+  @include from($tablet) {
+    &.intro {
+      .my-name {
+        margin-bottom: 4rem;
+        font-size: $size-2;
+      }
+      figure.photo {
+        margin: 0 0 0 2rem;
+      }
+      .my-mission {
+        width: 70%;
+        margin: 0 14.9%;
+        text-align: left;
+      }
+      .borderline {
+        border-bottom: 1px solid $gray3 !important;
+      }
+    }
+    &.media {
+      figure {
+        margin: 2rem;
+      }
+      .logo {
+        max-height: 3rem;
+      }
+      .logo.good {
+        max-height: 4rem;
+      }
+      .logo.reuters {
+        max-height: 5rem;
+      }
+      .logo.sebashi,
+      .logo.segd,
+      .logo.aiga,
+      .logo.uxcamp {
+        max-height: 4rem;
+      }
     }
   }
-  .intro-description {
-    width: 70%;
-    margin: 0 14.9%;
-    line-height: 1.8;
-  }
-  .about-description {
-    color: $gray6;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  &.intro figure {
-    margin-left: 2rem;
-  }
-  &.skills figure {
-    margin: 2.9%;
-    width: 94%;
-    height: 94%;
-  }
-  &.media {
-    figure {
-      margin: 1rem;
+  @include from($desktop) {
+    &.intro {
+      .my-mission {
+        font-size: $size-4;
+      }
     }
   }
 }
 
 // Style Bottom and Footer sections
 .bottom {
-  margin: 6rem 0;
-  h2 {
+  margin: 4rem 0 0 0;
+  padding: 10rem 0;
+  // from heropattrens.com
+  background-color: $white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23dedbd5' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  .website-headline {
     margin-bottom: 2rem;
+    font-size: $size-2;
+    @include text-weight-bold();
   }
 }
 .footer {
+  border-top: 1px solid $gray2;
   padding-bottom: 4rem;
   color: $gray6;
 }
