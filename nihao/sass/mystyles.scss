@@ -376,6 +376,16 @@ strong,
 // Style Project thumbnail component
 .project-column {
   @include tight-vertical-column();
+  .just-box {
+    position: relative;
+  }
+  .coming-soon {
+    position: absolute;
+    top: 5%;
+    left: -5%;
+    width: 60%;
+    height: auto;
+  }
 }
 .project-card {
   @include relative-w100-h100();
@@ -396,12 +406,12 @@ strong,
     .book-shadow {
       opacity: 0.1;
       top: 10%;
-      left: 20%;
+      left: 21%;
       width: 66%;
     }
     .book {
       top: 8%;
-      left: 15%;
+      left: 17%;
       width: 64%;
     }
   }
@@ -694,10 +704,19 @@ strong,
   // from heropattrens.com
   background-color: $white;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23dedbd5' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  .container {
+    margin: 0 $column-gap;
+    @include from($desktop) {
+      margin: 0 auto;
+    }
+  }
   .website-headline {
     margin-bottom: 2rem;
     font-size: $size-2;
     @include text-weight-bold();
+  }
+  .tagline {
+    margin-bottom: 3rem;
   }
 }
 .footer {
